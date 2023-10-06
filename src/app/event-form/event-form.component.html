@@ -1,0 +1,59 @@
+<div class="event-form-container">
+    <h2>Add Appointment</h2>
+    <form (ngSubmit)="saveEvent()" class="event-form">
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Name</mat-label>
+        <input matInput [(ngModel)]="event.name" name="name" required>
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Phone Number</mat-label>
+        <input matInput [(ngModel)]="event.phoneNumber" name="phoneNumber" required>
+      </mat-form-field>
+
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Package</mat-label>
+        <mat-select [(ngModel)]="event.packages" name="package" required>
+          <mat-option value="Aesthetic">Aesthetic</mat-option>
+          <mat-option value="Plastic Surgery">Plastic Surgery</mat-option>
+          <mat-option value="Hair">Hair</mat-option>
+          <mat-option value="Dental">Dental</mat-option>
+        </mat-select>
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Date</mat-label>
+        <input matInput [(ngModel)]="event.date" name="date" [matDatepicker]="datepicker" required>
+        <mat-datepicker-toggle matSuffix [for]="datepicker"></mat-datepicker-toggle>
+        <mat-datepicker #datepicker></mat-datepicker>
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Time</mat-label>
+        <input matInput [(ngModel)]="event.time" name="time" required>
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Salesperson</mat-label>
+        <input matInput [(ngModel)]="event.salesPerson" name="salesperson" required>
+      </mat-form-field>
+  
+      
+  
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Note</mat-label>
+        <textarea matInput [(ngModel)]="event.notes" name="note"></textarea>
+      </mat-form-field>
+  
+      <mat-form-field appearance="fill" class="form-field">
+        <mat-label>Amount</mat-label>
+        <input matInput [(ngModel)]="event.amount" name="amount" type="number" required>
+      </mat-form-field>
+  
+      <div class="button-container">
+        <button mat-raised-button color="primary" type="submit">Save</button>
+        <button mat-button (click)="cancel()">Cancel</button>
+      </div>
+    </form>
+  </div>
+  

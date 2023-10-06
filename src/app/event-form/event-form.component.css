@@ -1,0 +1,38 @@
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+
+.event-form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: 0 auto;
+    max-height: calc(100vh - 100px); /* Adjust the height as needed */
+    overflow-y: auto; /* Add a scrollbar if the content overflows */
+  }
+  
+  
+  h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .form-field {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .button-container button {
+    width: 48%;
+  }
+  

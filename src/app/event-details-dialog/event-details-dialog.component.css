@@ -1,0 +1,20 @@
+.event-details-container {
+    text-align: left;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  .event-details {
+    margin-top: 10px;
+  }
+  
+  .event-detail {
+    margin-bottom: 5px;
+  }
+  
+  button {
+    margin-top: 10px;
+  }
+  

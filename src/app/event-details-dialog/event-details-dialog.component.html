@@ -1,0 +1,29 @@
+<div class="event-details-container">
+    <h2>Appointment Details</h2>
+    <div class="event-details">
+      <div class="event-detail">
+        <strong>Name:</strong> {{ data.event.title }}
+      </div>
+      <div class="event-detail">
+        <strong>Phone Number:</strong> {{ data.event.extendedProps.phoneNumber }}
+      </div>
+      <div class="event-detail">
+        <strong>Package:</strong> {{ data.event.extendedProps.packages }}
+      </div>
+     
+      <div class="event-detail">
+        <strong>Time:</strong> {{ data.event.extendedProps.time }}
+      </div>
+      <div class="event-detail">
+        <strong>Salesperson:</strong> {{ data.event.extendedProps.salesPerson }}
+      </div>
+      <div class="event-detail">
+        <strong>Note:</strong> {{ data.event.extendedProps.notes }}
+      </div>
+      <div class="event-detail">
+        <strong>Amount:</strong> {{ data.event.extendedProps.amount }}
+      </div>
+    </div>
+    <button mat-button (click)="closeDialog()">Close</button>
+  </div>
+  

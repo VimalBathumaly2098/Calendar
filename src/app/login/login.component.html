@@ -1,0 +1,24 @@
+<div class="login-container">
+  <div class="logo">
+    <!-- Your logo here -->
+    <img src="assets/logo.png" alt="Logo">
+  </div>
+  <h2>Login</h2>
+  <form>
+    <div class="form-group">
+      <label for="email"></label>
+      <input type="email" id="email" [(ngModel)]="email" name="email" placeholder="Enter your email" required>
+    </div>
+    <div class="form-group">
+      <label for="password"></label>
+      <div class="password-input">
+        <input type="{{ showPassword ? 'text' : 'password' }}" id="password" [(ngModel)]="password" name="password" placeholder="Enter your password" required>
+        <span class="toggle-password" (click)="togglePassword()">
+          <i class="fa" [ngClass]="{'fa-eye-slash': showPassword, 'fa-eye': !showPassword}"></i>
+        </span>
+      </div>
+    </div>
+    <button class="btn btn-primary" (click)="login()">Login</button>
+  </form>
+  <p class="register-text">Not registered yet? <a routerLink="/registration">Register here</a></p>
+</div>

@@ -1,0 +1,30 @@
+<div class="top-bar">
+  <!-- Add Event Button -->
+  <button class="add-appointment-button" (click)="openEventForm()">Add Appointment</button>
+  <button class="logout-button" (click)="logout()">Logout</button>
+</div>
+
+<div class="calendar-legend">
+  <div class="legend-item">
+    <div class="legend-color" style="background-color: #FF647F;"></div>
+    <div class="legend-description">Aesthetic</div>
+  </div>
+  <div class="legend-item">
+    <div class="legend-color" style="background-color: red;"></div>
+    <div class="legend-description">Plastic Surgery</div>
+  </div>
+  <div class="legend-item">
+    <div class="legend-color" style="background-color: blue;"></div>
+    <div class="legend-description">Hair</div>
+  </div>
+  <div class="legend-item">
+    <div class="legend-color" style="background-color: #30D5C8;"></div>
+    <div class="legend-description">Dental</div>
+  </div>
+  <!-- Add more legend items as needed -->
+</div>
+
+<div class="calendar-container">
+  <h1>Appointment Calendar</h1>
+  <full-calendar [options]="calendarOptions" [events]="eventsPromise | async"></full-calendar>
+</div>
